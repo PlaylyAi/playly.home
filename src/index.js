@@ -61,17 +61,20 @@ headerLink4.addEventListener('click',() => section4.scrollIntoView(scrollOpt));
 headerLink5.addEventListener('click',() => section5.scrollIntoView(scrollOpt));
 
 let up = null;
+const arrow = document.getElementById('arrow');
+const y1 = window.scrollY + section1.getBoundingClientRect().top;
+arrow.addEventListener('click',() => section1.scrollIntoView(scrollOpt));
 
 function doScroll(scroll) {
 
-  const arrow = document.getElementById('arrow');
+  
   const arrowImg = document.getElementById('arrowImg');
   const scrollTxt = document.getElementById('scroll');
   const header = document.getElementById('header');
   const machinae = document.getElementById('machinae');
   const bottom = document.getElementById('bottom');
    
-  const y1 = window.scrollY + section1.getBoundingClientRect().top;
+  
   const y2 = window.scrollY + section2.getBoundingClientRect().top;
   const y3 = window.scrollY + section3.getBoundingClientRect().top;
   const y4 = window.scrollY + section4.getBoundingClientRect().top;
@@ -100,7 +103,7 @@ function doScroll(scroll) {
     arrow.addEventListener('click',() => section3.scrollIntoView(scrollOpt));
   } else if ((scroll >= y1 - offset) && up ){
     arrow.addEventListener('click',() => section2.scrollIntoView(scrollOpt));
-  } else if (scroll <= y1){
+  } else if (scroll <= y1 - offset){
     arrow.addEventListener('click',() => section1.scrollIntoView(scrollOpt));
     arrowImg.classList.remove('arrow_up');
     scrollTxt.innerHTML = 'scroll';
