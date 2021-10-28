@@ -66,20 +66,17 @@ const y1 = window.scrollY + section1.getBoundingClientRect().top;
 arrow.addEventListener('click',() => section1.scrollIntoView(scrollOpt));
 
 function doScroll(scroll) {
-
-  
   const arrowImg = document.getElementById('arrowImg');
   const scrollTxt = document.getElementById('scroll');
   const header = document.getElementById('header');
   const machinae = document.getElementById('machinae');
-  const bottom = document.getElementById('bottom');
-   
+  // const bottom = document.getElementById('bottom');
   
   const y2 = window.scrollY + section2.getBoundingClientRect().top;
   const y3 = window.scrollY + section3.getBoundingClientRect().top;
   const y4 = window.scrollY + section4.getBoundingClientRect().top;
   const y5 = window.scrollY + section5.getBoundingClientRect().top;
-  const yBottom = window.scrollY + bottom.getBoundingClientRect().top;
+  const yBottom = window.scrollY + section5.getBoundingClientRect().bottom;
     
   const scrollHeight = Math.max(
     document.body.scrollHeight, document.documentElement.scrollHeight,
@@ -88,26 +85,26 @@ function doScroll(scroll) {
   );
   const offset = Math.floor(scrollHeight * 0.1);
    
-  if (scroll >= yBottom - offset ) {
+  if (scroll >= yBottom - offset * 1.1 ) {
     arrowImg.classList.add('arrow_up');
     scrollTxt.innerHTML = 'up';
-    up = false;
+    up = true;
     arrow.addEventListener('click',() => header.scrollIntoView(scrollOpt));
-  } else if((scroll >= y5 - offset) && up ){
+  } else if((scroll >= y5 - offset) && !up ){
     arrow.addEventListener('click',() => machinae.scrollIntoView(scrollOpt));
-  } else if((scroll >= y4 - offset) && up ){
+  } else if((scroll >= y4 - offset) && !up ){
     arrow.addEventListener('click',() => section5.scrollIntoView(scrollOpt));
-  } else if ((scroll >= y3 - offset) && up ){
+  } else if ((scroll >= y3 - offset) && !up ){
     arrow.addEventListener('click',() => section4.scrollIntoView(scrollOpt));
-  } else if ((scroll >= y2 - offset) && up ){
+  } else if ((scroll >= y2 - offset) && !up ){
     arrow.addEventListener('click',() => section3.scrollIntoView(scrollOpt));
-  } else if ((scroll >= y1 - offset) && up ){
+  } else if ((scroll >= y1 - offset) && !up ){
     arrow.addEventListener('click',() => section2.scrollIntoView(scrollOpt));
-  } else if (scroll <= y1 - offset){
+  } else if (scroll <= y1 ){
     arrow.addEventListener('click',() => section1.scrollIntoView(scrollOpt));
     arrowImg.classList.remove('arrow_up');
     scrollTxt.innerHTML = 'scroll';
-    up = true;
+    up = false;
   }
 }
 

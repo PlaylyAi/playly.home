@@ -1,5 +1,4 @@
 .section{
-  // &_ai {}
   &_video-analysis {
     flex-wrap: wrap-reverse;
     & > .section__description {
@@ -16,14 +15,13 @@
     align-items: flex-end;
     gap: $section-gap;
     justify-content: center;
-    & > .section__description {
-      width: 47%;
+    & > .section__content {
+      order: 1;
     }
   }
   &_modeling{
     flex-wrap: wrap-reverse;
   }
-  // &_player-analysis{}
 }
 .machinae{
   &__wrapper{

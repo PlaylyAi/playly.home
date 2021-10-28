@@ -1,6 +1,14 @@
 @media (max-width: 1440px) {
+  .header__wrapper{
+    padding-top: 10vh;
+    row-gap: 4vh;
+  }
   .bg_top{
-    background-position: 21% -5%;
+    background-position: 79% -5%;
+  }
+  .section{
+    margin-top: 120px;
+    &__title {font-size: 50px;}
   }
   .section_recognition {
     flex-direction: column-reverse;
@@ -8,6 +16,7 @@
     margin: 100px auto 0 auto;
     & > .section__description {
       max-width: 43%;
+      order: 1;
     }
     & > .section__content {
       max-width: 65%;
@@ -28,7 +37,8 @@
   }
 
   .section{
-    row-gap: $section-gap;
+    padding-bottom: 1vh;
+    row-gap: 4vh;
      &__description {
       min-width: 100%;
     }
@@ -37,12 +47,9 @@
     }
 
     &_video-analysis{
-      margin-top: 0;
       & > .section__description {
         display: flex;
-        
         row-gap: 0;
-        padding-top: 0;
       }
     }
     &_recognition {
@@ -61,11 +68,10 @@
     }
   }
   .arrow{
-    top: 70vh;
+    top: 65vh;
     width: 90%;
   }
   .section {
-    margin: 100px auto;
     row-gap: 40px;
     &__content {
       max-width: 50%;
@@ -78,7 +84,6 @@
       font-size: 22px;
     }
     &_video-analysis{
-      margin-top: 10px;
       & > .section__description {
         row-gap: 0;
         margin: 0;
@@ -140,8 +145,10 @@
 @media (max-width: 768px) {
 
   .header {
-    &__wrapper{
-      row-gap: 260px;
+    height: 60vh;
+    &__wrapper {
+      padding-top: 2vh;
+      padding-bottom: 6vh;
     }
     &__title {
       font-size: 124px;
@@ -150,7 +157,7 @@
 
   .bg {
     &_top{
-      background-position: 58% 7%;
+      background-position: 92% 7%;
     }
     &_mid{
       background-position: 37% 3%;
@@ -165,20 +172,17 @@
   }
 
   .section {
+    padding-top: 6vh;
     row-gap: 2vh;
-    &:first-child {
-      margin-top: 60px;
-    }
     &_recognition {
-      height: 800px;
+      height: 72vh;
       margin-bottom: 0;
     }
   }
-
- 
+   
   .machinae{
   &__wrapper{
-    height: 690px;
+    height: 55vh;
   } 
   &__title {
     margin-top: 180px;
@@ -203,7 +207,7 @@
 @media (max-width: 600px) {
   .bg {
     &_top{
-      background-position: 13% 7%;
+      background-position: 153% 7%;
       background-size: contain;
     }
     &_mid{
@@ -213,12 +217,11 @@
       background-position: 44% 49%;
     }
   }
-  .header {
-    &__wrapper{
-      padding-top: 100px;
-      row-gap: 320px;
-    }
-  
+  .arrow {
+    top: 50vh;
+    width: 90%;
+  }
+  .header { 
     &__title {
       font-size: 114px;
     }
@@ -232,18 +235,28 @@
   
  
   .section {
-    margin-top: 80px;
+    // // padding-top: 80px;
+    // margin: 5vh auto;
     &__title{
       font-size: 40px;
     }
     &__txt{
       font-size: 19px;
     }
-    &:first-child {
-      margin-top: 0;
+    &_video-analysis {
+      padding-top: 0;
+      margin-top: 4vh;
     }
-    &__recognition {
-      height: 550px;
+    &_recognition {
+      padding-top: 0;
+      margin-top: 4vh;
+    }
+    &_modeling {
+      padding-top: 0;
+    }
+    &_player-analysis{
+      padding-top: 0;
+      
     }
   }
     
@@ -279,33 +292,42 @@
 }
 
 @media (max-width: 480px) {
+  .header__wrapper {
+    row-gap: 3vh;
+    padding-top: 0;
+  }
+  .section{
+    &__title{
+      font-size: 28px;
+    }
+    &__txt{
+      font-size: 16px;
+    }
+    padding-bottom: 2vh;
+  }
   .bg {
     &_top{
-      background-position: 13% 7%;
+      background-position: 73% 7%;
     }
     &_mid{
-      background-position: 62% 14%;
+      background-position: 62% 100%;
     }
     &_bottom{
       background-position: 44% 49%;
     }
   }
   .header {
-    min-height: 80vh;
+    height: 42vh;
     &__title {
       font-size: 84px;
     }
-    &__wrapper{
-      padding-top: 100px;
-      row-gap: 260px;
-    }
-  }  
-
-  .arrow{
-    top: 75vh;
   }
+  .arrow {
+    top: 45%
+  }
+
   .section_recognition {
-    height: 600px;
+    // height: 55vh;
     flex-wrap: nowrap;
   }
 
@@ -345,29 +367,31 @@
     background-position: 13% 7%;
   }
   .header {
-    &__wrapper{
-      padding-top: 80px;
-      row-gap: 200px;
-      }
     &__title {
       font-size: 64px;
       }
+    &__nav-list__item {
+      font-size: 18px;
+    }
+    &__wrapper {
+      row-gap: 4vh;
+    }
   }
   
-  .arrow{
-    top: 72vh;
-    width: 90%;
-  }
   .section {
-    margin-top: 60px;
+    // margin-top: 60px;
     &__title{
-      font-size: 34px;
+      font-size: 28px;
     }
     &__txt{
       font-size: 18px;
     }
     &:first-child {
       margin-top: 0;
+    }
+    &_recognition {
+      margin-top: 2vh;
+      height: auto;
     }
   }
 }
