@@ -1,5 +1,6 @@
 import './styles/index.scss';
 import './component';
+import poster from './assets/images/poster.png';
 
 const videoAi = document.getElementById('videoAi');
 const videoAnalysis = document.getElementById('videoVideoAnalysis');
@@ -12,7 +13,10 @@ const play3 = document.getElementById('play3');
 const play4 = document.getElementById('play4');
 const play5 = document.getElementById('play5');
 
+
+
 function videoConrol(video,play) {
+  video.setAttribute('poster', poster);
   video.addEventListener('pause', ()=> {
     play.classList.remove('active', 'hiden');
     play.classList.add('active');
