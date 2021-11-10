@@ -89,7 +89,7 @@ function doScroll(scroll) {
   );
   const offset = Math.floor(scrollHeight * 0.1);
    
-  if (scroll >= yBottom - offset * 1.1 ) {
+  if (scroll >= yBottom - offset * 1.1 || scroll > y5 ) {
     arrowImg.classList.add('arrow_up');
     scrollTxt.innerHTML = 'up';
     up = true;
