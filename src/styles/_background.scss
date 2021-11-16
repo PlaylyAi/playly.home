@@ -4,9 +4,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 18% 0%;
-    // animation-name: example;
-    // animation-duration: 4s;
-    // animation-iteration-count: 1;
+    animation-name: scale;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
     }
   &_mid{
     background-image: url('../assets/images/mid-player.png');
@@ -21,12 +21,12 @@
     background-position: 85%;
   }
 }
-// @keyframes example {
-//   0% {
-//     transform: scale(.8);
-//   }
+@keyframes scale {
+  0% {
+    transform: scale(.8);
+  }
 
-//   100% {
-//     transform: scale(1);
-//   }
-// }
+  100% {
+    transform: scale(1);
+  }
+}

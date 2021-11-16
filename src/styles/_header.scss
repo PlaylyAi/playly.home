@@ -18,6 +18,7 @@
     line-height: 106%;
     margin: 0;
     padding: 0;
+    // padding-right: .5em;
     letter-spacing: 0.1em;
   }
   &__nav {
@@ -25,34 +26,39 @@
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
-    line-height: 106%;
     letter-spacing: 0.1em;
     &-list {
       list-style-type: none;
       margin-left: 0; 
       padding-left: 0;
       font-family: 'Bebas Neue', cursive;
-      
+      &__container {
+        margin-bottom: .3em;
+      }
       &__item {
         position: relative;
-        margin-bottom: 25px;
+        transition:  all .6s ease-out;
+        left: 0;
         &:last-child {
           margin-bottom: 0;
+          
         }
         &:hover {
           left: 42px;
           cursor: pointer;
+          transition:  all 1.2s ease-out;
         }
         &:hover:before {
           content: "";
           position: absolute;
-          display: block;
-          left: -50px;
-          top: 8px;
-          width: 40px;
-          height: 6px;
+          display: inline-block;
+          left: -1.6em;
+          top: 35%;
+          width: 1.3em;
+          height: .25em;
           background-color: $elements;
           pointer-events: none;
+          transition:  all .01s ease-out;
         }
         
       }

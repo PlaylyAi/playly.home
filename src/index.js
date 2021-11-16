@@ -66,7 +66,7 @@ headerLink5.addEventListener('click',() => section5.scrollIntoView(scrollOpt));
 
 let up = null;
 const arrow = document.getElementById('arrow');
-const y1 = window.scrollY + section1.getBoundingClientRect().top;
+const y1 = window.scrollY + section1.getBoundingClientRect().bottom;
 arrow.addEventListener('click',() => section1.scrollIntoView(scrollOpt));
 
 function doScroll(scroll) {
@@ -102,9 +102,9 @@ function doScroll(scroll) {
     arrow.addEventListener('click',() => section4.scrollIntoView(scrollOpt));
   } else if ((scroll >= y2 - offset) && !up ){
     arrow.addEventListener('click',() => section3.scrollIntoView(scrollOpt));
-  } else if ((scroll >= y1 - offset) && !up ){
+  } else if ((scroll >= y1 - offset * 1.3) && !up ){
     arrow.addEventListener('click',() => section2.scrollIntoView(scrollOpt));
-  } else if (scroll <= y1 ){
+  } else if (scroll <= y1 - offset ){
     arrow.addEventListener('click',() => section1.scrollIntoView(scrollOpt));
     arrowImg.classList.remove('arrow_up');
     scrollTxt.innerHTML = 'scroll';
